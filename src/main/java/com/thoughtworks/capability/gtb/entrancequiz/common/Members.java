@@ -1,12 +1,12 @@
-package common;
+package com.thoughtworks.capability.gtb.entrancequiz.common;
 
 import org.springframework.stereotype.Component;
 
-import java.util.LinkedHashMap;
+import java.util.*;
 
 @Component
 public class Members {
-    // private List<Integer> IdList;
+    private List<Integer> idList;
 
     private LinkedHashMap<Integer, String> memberList = new LinkedHashMap<>();
 
@@ -27,11 +27,22 @@ public class Members {
         memberList.put(14, "大乔");
         memberList.put(15, "蔡文姬");
 
-        // this.IdList = new ArrayList<>(memberList.keySet());
+        this.idList = new ArrayList<>(memberList.keySet());
     }
 
     public String getMemberName(Integer Id) {
-
         return memberList.get(Id);
+    }
+
+    public int getMembersNum() {
+        return memberList.size();
+    }
+
+    public Integer getIdFromIdList(int index) {
+        return idList.get(index);
+    }
+
+    public void randomIdOrder() {
+        Collections.shuffle(idList);
     }
 }

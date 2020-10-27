@@ -28,4 +28,15 @@ class MembersTest {
         String actualMemberNameAfterShuffle = members.getMemberName(members.getIdFromIdList(memberId - 1));
         assertNotEquals("庄周", actualMemberNameAfterShuffle);
     }
+
+    @Test
+    void shouldExtendMemberListWhenAddNewMember() {
+        Members members = new Members();
+        members.addNewMember("姜子牙");
+        members.addNewMember("项羽");
+
+        assertEquals(17, members.getMembersNum());
+        assertEquals("姜子牙", members.getMemberName(16));
+        assertEquals("项羽", members.getMemberName(17));
+    }
 }

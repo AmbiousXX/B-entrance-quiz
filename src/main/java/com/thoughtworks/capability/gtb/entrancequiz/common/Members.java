@@ -45,4 +45,9 @@ public class Members {
     public void randomIdOrder() {
         Collections.shuffle(idList);
     }
+
+    public void addNewMember(String name) {
+        Integer newMemberId = memberList.size() + 1;
+        memberList.put(newMemberId, name);
+    }
 }

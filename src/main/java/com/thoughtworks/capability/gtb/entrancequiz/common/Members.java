@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 import java.util.*;
 
 @Component
+// TODO GTB-知识点: - 违反三层架构，存储数据的类应该命名为xxxRepository,并使用@Repositoy注解
 public class Members {
     private List<Integer> idList;
 

@@ -2,6 +2,7 @@ package com.thoughtworks.capability.gtb.entrancequiz.service;
 
 import com.thoughtworks.capability.gtb.entrancequiz.common.Members;
 
+// TODO GTB-知识点: - Service应该使用@Service注解
 public class MemberOperationService {
     private final Members members;
     private final GroupDivision groupDivision;
